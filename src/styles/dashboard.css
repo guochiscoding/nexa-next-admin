@@ -1,0 +1,156 @@
+.page-shell,
+.home-page {
+  display: grid;
+  height: 100%;
+  min-height: 0;
+  gap: 16px;
+  overflow: auto;
+  padding: 18px 20px;
+}
+
+.page-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-eyebrow {
+  margin: 0 0 6px;
+  color: var(--brand-blue);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--Font-Black-Gy1);
+  font-size: 24px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.page-description {
+  display: block;
+  max-width: 760px;
+  margin-top: 8px;
+  color: var(--Font-Black-Gy2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card,
+.dashboard-panel,
+.content-card,
+.doc-entry,
+.filter-strip,
+.result-card,
+.exception-card,
+.result-panel,
+.exception-panel {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgb(15 18 23 / 5%);
+}
+
+.stat-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.stat-title,
+.muted {
+  color: var(--Font-Black-Gy2);
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
+  gap: 16px;
+}
+
+.dashboard-panel,
+.content-card {
+  padding: 18px;
+}
+
+.panel-title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.panel-subtitle {
+  margin: 0 0 16px;
+  color: var(--Font-Black-Gy2);
+  font-size: 13px;
+}
+
+.health-list,
+.activity-list,
+.capability-grid,
+.feature-grid,
+.doc-grid,
+.template-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.capability-grid,
+.feature-grid,
+.doc-grid,
+.template-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric-row,
+.health-row,
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.health-track {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--bg-color-component);
+}
+
+.health-bar {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand-blue);
+}
+
+.status-chip,
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  border-radius: 999px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-processing { background: var(--brand-blue-light); color: var(--brand-blue); }
+.status-success { background: var(--success-light); color: var(--success-color); }
+.status-warning { background: var(--warning-light); color: var(--warning-color); }
+.status-danger { background: var(--error-light); color: var(--error-color); }

@@ -1,0 +1,149 @@
+.app-button {
+  --button-color: var(--brand-black);
+  --button-hover: var(--brand-black-hover);
+  --button-active: var(--brand-black-active);
+  --button-disabled: var(--brand-black-disabled);
+  --button-outline-bg: var(--bg-color-container);
+  display: inline-flex;
+  max-width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--component-border);
+  border-radius: 4px;
+  background: var(--bg-color-container);
+  color: var(--Font-Black-Gy1);
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.app-button--small { min-height: 28px; padding: 0 8px; font-size: 12px; }
+.app-button--medium { min-height: 32px; padding: 0 16px; font-size: 14px; }
+.app-button--large { min-height: 40px; padding: 0 24px; font-size: 16px; }
+.app-button--icon { width: 32px; height: 32px; padding: 0; }
+
+.app-button-color--black {
+  --button-color: var(--brand-black);
+  --button-hover: var(--brand-black-hover);
+  --button-active: var(--brand-black-active);
+  --button-disabled: var(--brand-black-disabled);
+  --button-outline-bg: var(--bg-color-container);
+}
+
+.app-button-color--blue {
+  --button-color: var(--brand-blue);
+  --button-hover: var(--brand-blue-hover);
+  --button-active: var(--brand-blue-active);
+  --button-disabled: var(--brand-blue-disabled);
+  --button-outline-bg: var(--brand-blue-light);
+}
+
+.app-button-color--red {
+  --button-color: var(--error-color);
+  --button-hover: var(--error-hover);
+  --button-active: var(--error-active);
+  --button-disabled: var(--error-disabled);
+  --button-outline-bg: var(--bg-color-container);
+}
+
+:root[data-theme='dark'] .app-button-color--black {
+  --button-color: var(--Font-Black-Gy2);
+  --button-hover: var(--Font-Black-Gy1);
+  --button-active: var(--Font-Black-Gy3);
+  --button-disabled: var(--brand-black-disabled);
+  --button-outline-bg: var(--brand-black-light);
+}
+
+:root[data-theme='dark'] .app-button-color--blue,
+:root[data-theme='dark'] .app-button-color--red {
+  --button-outline-bg: var(--bg-color-container);
+}
+
+.app-button--default { border-color: var(--component-border); color: var(--Font-Black-Gy1); }
+.app-button--outline { border-color: var(--button-color); background: transparent; color: var(--button-color); }
+.app-button--primary { border-color: var(--button-color); background: var(--button-color); color: var(--Font-White-Gy1); }
+.app-button--text { border-color: transparent; background: transparent; color: var(--button-color); }
+.app-button--solid { border-color: var(--button-color); background: var(--button-outline-bg); color: var(--button-color); }
+.app-button--ghost-white { border-color: var(--Font-White-Gy1); background: transparent; color: var(--Font-White-Gy1); }
+.app-button--ghost-gray { border-color: var(--Font-White-Gy4); background: transparent; color: var(--Font-White-Gy1); }
+.app-button--link { border-color: transparent; background: transparent; color: var(--button-color); text-decoration: underline; text-underline-offset: 2px; }
+
+:root[data-theme='dark'] .app-button-color--black.app-button--primary {
+  color: var(--Font-White-Gy1-Anti);
+}
+
+:root[data-theme='dark'] .app-button--default:not(:disabled):not([aria-disabled='true']):hover {
+  border-color: var(--Font-Black-Gy2);
+  background: var(--bg-color-container-hover);
+  color: var(--Font-Black-Gy1);
+}
+
+:root[data-theme='dark'] .app-button--default:not(:disabled):not([aria-disabled='true']):active {
+  border-color: var(--Font-Black-Gy1);
+  background: var(--bg-color-container-active);
+  color: var(--Font-Black-Gy1);
+}
+
+.app-button--default:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--brand-black-hover); background: transparent; color: var(--brand-black-hover); }
+.app-button--outline:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--button-hover); background: transparent; color: var(--button-hover); }
+.app-button--primary:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--button-hover); background: var(--button-hover); color: var(--Font-White-Gy1); }
+.app-button--solid:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--button-hover); background: var(--button-outline-bg); color: var(--button-hover); }
+.app-button--text:not(:disabled):not([aria-disabled='true']):hover,
+.app-button--link:not(:disabled):not([aria-disabled='true']):hover { border-color: transparent; color: var(--button-hover); }
+.app-button--ghost-white:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--Font-White-Gy2); background: var(--but-white-hover); color: var(--Font-White-Gy1); }
+.app-button--ghost-gray:not(:disabled):not([aria-disabled='true']):hover { border-color: var(--Font-White-Gy4); background: var(--but-white-hover); color: var(--Font-White-Gy1); }
+
+:root[data-theme='dark'] .app-button-color--black.app-button--primary:not(:disabled):not([aria-disabled='true']):hover {
+  color: var(--Font-White-Gy1-Anti);
+}
+
+.app-button--default:not(:disabled):not([aria-disabled='true']):active { border-color: var(--brand-black-active); background: transparent; color: var(--brand-black-active); }
+.app-button--outline:not(:disabled):not([aria-disabled='true']):active { border-color: var(--button-active); background: transparent; color: var(--button-active); }
+.app-button--primary:not(:disabled):not([aria-disabled='true']):active { border-color: var(--button-active); background: var(--button-active); color: var(--Font-White-Gy1); }
+.app-button--solid:not(:disabled):not([aria-disabled='true']):active { border-color: var(--button-active); background: var(--button-outline-bg); color: var(--button-active); }
+.app-button--text:not(:disabled):not([aria-disabled='true']):active,
+.app-button--link:not(:disabled):not([aria-disabled='true']):active { border-color: transparent; color: var(--button-active); }
+.app-button--ghost-white:not(:disabled):not([aria-disabled='true']):active { border-color: var(--Font-White-Gy3); background: var(--but-white-active); color: var(--Font-White-Gy1); }
+.app-button--ghost-gray:not(:disabled):not([aria-disabled='true']):active { border-color: var(--Font-White-Gy4); background: var(--but-white-active); color: var(--Font-White-Gy1); }
+
+:root[data-theme='dark'] .app-button-color--black.app-button--primary:not(:disabled):not([aria-disabled='true']):active {
+  color: var(--Font-White-Gy1-Anti);
+}
+
+.app-button:disabled,
+.app-button[aria-disabled='true'] {
+  --button-color: var(--button-disabled);
+  cursor: not-allowed;
+}
+
+.app-button--default:disabled,
+.app-button--default[aria-disabled='true'] { border-color: var(--component-border); background: var(--bg-color-container); color: var(--Font-Black-Gy4); }
+.app-button--outline:disabled,
+.app-button--outline[aria-disabled='true'] { border-color: var(--button-disabled); background: transparent; color: var(--button-disabled); }
+.app-button--primary:disabled,
+.app-button--primary[aria-disabled='true'] { border-color: var(--button-disabled); background: var(--button-disabled); color: var(--Font-White-Gy1); }
+.app-button--text:disabled,
+.app-button--text[aria-disabled='true'] { border-color: transparent; background: transparent; color: var(--button-disabled); }
+.app-button--solid:disabled,
+.app-button--solid[aria-disabled='true'] { border-color: var(--button-disabled); background: var(--button-outline-bg); color: var(--button-disabled); }
+.app-button--link:disabled,
+.app-button--link[aria-disabled='true'] { border-color: transparent; background: transparent; color: var(--button-disabled); text-decoration: underline; text-underline-offset: 2px; }
+.app-button--ghost-white:disabled,
+.app-button--ghost-white[aria-disabled='true'],
+.app-button--ghost-gray:disabled,
+.app-button--ghost-gray[aria-disabled='true'] { border-color: var(--Font-White-Gy4); background: transparent; color: var(--Font-White-Gy4); }
+
+.app-button-content { display: inline-flex; max-width: 100%; align-items: center; justify-content: center; gap: 6px; }
+.app-button-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.app-button-icon { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; line-height: 1; color: currentColor; }
+.app-button-spinner { width: 16px; height: 16px; animation: spin 1s linear infinite; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

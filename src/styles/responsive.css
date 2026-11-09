@@ -1,0 +1,34 @@
+@media (max-width: 1100px) {
+  .stat-grid,
+  .dashboard-grid,
+  .capability-grid,
+  .feature-grid,
+  .doc-grid,
+  .exception-grid,
+  .result-grid,
+  .template-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-body,
+  .app-body.is-collapsed {
+    grid-template-columns: 1fr;
+  }
+  .app-sider {
+    display: none;
+  }
+  .login-view {
+    grid-template-columns: 1fr;
+  }
+  .login-brand-zone {
+    min-height: 320px;
+  }
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .mobile-only {
+    display: inline-flex;
+  }
+}
